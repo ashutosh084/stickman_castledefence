@@ -143,14 +143,14 @@ class StickmanTowerDefence extends Phaser.Scene {
     cast = new Cast(1);
 
     //health
-    enemyHealthText = this.add.text(900, 16, "Health: " + enemyHealth, {
+    enemyHealthText = this.add.text(900, 16, "Health ❤: " + enemyHealth, {
       fontSize: "32px",
       color: "#0000ff",
       backgroundColor: "black",
     });
 
     //gold text
-    goldText = this.add.text(16, 16, "Gold: " + gold, {
+    goldText = this.add.text(16, 16, "Gold 🥇: " + gold, {
       fontSize: "32px",
       color: "gold",
       backgroundColor: "black",
@@ -162,8 +162,8 @@ class StickmanTowerDefence extends Phaser.Scene {
     //   .setScale(0.1, 1);
 
     this.add
-      .text(100, 540, "Spawn Soldier", {
-        fontSize: "24px",
+      .text(100, 540, "Spawn Soldier🤺", {
+        fontSize: "40px",
         color: "white",
         backgroundColor: "black",
       })
@@ -172,7 +172,7 @@ class StickmanTowerDefence extends Phaser.Scene {
         if (gold >= 100) {
           cast.limit++;
           gold -= 100;
-          goldText.setText("Gold: " + gold);
+          goldText.setText("Gold 🥇: " + gold);
         }
       })
       .setDepth(10);
@@ -242,8 +242,8 @@ class StickmanTowerDefence extends Phaser.Scene {
           } else actor.character.anims.play("turn");
         }
       }
-      enemyHealthText.setText("Health: " + enemyHealth);
-      goldText.setText("Gold: " + gold);
+      enemyHealthText.setText("Health ❤: " + enemyHealth);
+      goldText.setText("Gold 🥇: " + gold);
       if (actor.actionTimeOut > 0) {
         actor.actionTimeOut--;
       }
